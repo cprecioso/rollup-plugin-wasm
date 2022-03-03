@@ -12,10 +12,14 @@
     "dist/*"
   ],
   "scripts": {
+    "postinstall": "husky install",
     "prepack": "rollup --config"
   },
   "devDependencies": {
     "@types/node": "^12",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "organize-imports-cli": "^0.9.0",
     "prettier": "^2.5.1",
     "prettier-plugin-pkg": "^0.11.1",
     "rollup": "^2.69.0",
