@@ -1,6 +1,6 @@
 {
   "name": "@cprecioso/rollup-plugin-wasm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "commonjs",
   "license": "ISC",
   "engines": {
