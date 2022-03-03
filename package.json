@@ -4,24 +4,25 @@
   "type": "commonjs",
   "license": "ISC",
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "lib/*"
+    "dist/*"
   ],
   "scripts": {
-    "prepack": "tsc -p ."
+    "prepack": "rollup --config"
   },
   "devDependencies": {
     "@types/node": "^12",
     "prettier": "^2.5.1",
     "prettier-plugin-pkg": "^0.11.1",
     "rollup": "^2.69.0",
+    "rollup-plugin-ts": "^2.0.5",
     "typescript": "^4.6.2"
   },
   "volta": {
-    "node": "12.22.10"
+    "node": "14.19.0"
   }
 }

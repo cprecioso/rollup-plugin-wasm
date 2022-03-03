@@ -1,6 +1,8 @@
+import module from "module";
 import path from "path";
 import type { Plugin } from "rollup";
 
+const require = module.createRequire(import.meta.url);
 const utilsFile = require.resolve("./utils");
 
 const wasm = (): Plugin => ({
