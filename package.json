@@ -1,0 +1,27 @@
+{
+  "name": "@cprecioso/rollup-plugin-wasm",
+  "version": "0.0.0",
+  "type": "commonjs",
+  "license": "ISC",
+  "engines": {
+    "node": ">=12"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/*"
+  ],
+  "scripts": {
+    "prepack": "tsc -p ."
+  },
+  "devDependencies": {
+    "@types/node": "^12",
+    "prettier": "^2.5.1",
+    "prettier-plugin-pkg": "^0.11.1",
+    "rollup": "^2.69.0",
+    "typescript": "^4.6.2"
+  },
+  "volta": {
+    "node": "12.22.10"
+  }
+}
