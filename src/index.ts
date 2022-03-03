@@ -7,7 +7,7 @@ const utilsFile = fileURLToPath(new URL("utils.mjs", import.meta.url))
 
 const wasm = (): Plugin => ({
   name: "wasm",
-  async transform(code, id) {
+  async load(id) {
     if (path.extname(id) !== ".wasm") return null
 
     this.addWatchFile(id)
