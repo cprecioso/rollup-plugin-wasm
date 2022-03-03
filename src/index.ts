@@ -1,3 +1,4 @@
+import fs from "fs"
 import path from "path"
 import type { Plugin } from "rollup"
 import { fileURLToPath } from "url"
@@ -14,7 +15,7 @@ const wasm = (): Plugin => ({
     const wasmReferenceId = this.emitFile({
       type: "asset",
       fileName: path.basename(id),
-      source: code,
+      source: await fs.promises.readFile(id),
     })
 
     return {
