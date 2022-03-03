@@ -1,9 +1,8 @@
-import module from "module"
 import path from "path"
 import type { Plugin } from "rollup"
+import { fileURLToPath } from "url"
 
-const require = module.createRequire(import.meta.url)
-const utilsFile = require.resolve("./utils")
+const utilsFile = fileURLToPath(new URL("utils.mjs", import.meta.url))
 
 const wasm = (): Plugin => ({
   name: "wasm",
