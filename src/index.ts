@@ -1,22 +1,22 @@
-import module from "module";
-import path from "path";
-import type { Plugin } from "rollup";
+import module from "module"
+import path from "path"
+import type { Plugin } from "rollup"
 
-const require = module.createRequire(import.meta.url);
-const utilsFile = require.resolve("./utils");
+const require = module.createRequire(import.meta.url)
+const utilsFile = require.resolve("./utils")
 
 const wasm = (): Plugin => ({
   name: "wasm",
   async transform(code, id) {
-    if (path.extname(id) !== ".wasm") return null;
+    if (path.extname(id) !== ".wasm") return null
 
-    this.addWatchFile(id);
+    this.addWatchFile(id)
 
     const wasmReferenceId = this.emitFile({
       type: "asset",
       fileName: path.basename(id),
       source: code,
-    });
+    })
 
     return {
       code: `
@@ -26,8 +26,8 @@ export const __synthetic__ = mod.instance.exports;
 `,
       syntheticNamedExports: "__synthetic__",
       moduleSideEffects: false,
-    };
+    }
   },
-});
+})
 
-export default wasm;
+export default wasm

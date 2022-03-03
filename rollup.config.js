@@ -1,9 +1,9 @@
 // @ts-check
 
-import { builtinModules } from "module";
-import ts from "rollup-plugin-ts";
+import { builtinModules } from "module"
+import ts from "rollup-plugin-ts"
 
-const externalModules = new Set(builtinModules);
+const externalModules = new Set(builtinModules)
 
 export default /** @type {import("rollup").RollupOptions[]} */ ([
   {
@@ -18,4 +18,4 @@ export default /** @type {import("rollup").RollupOptions[]} */ ([
     plugins: [ts({ typescript: require("typescript") })],
     external: (id) => externalModules.has(id),
   },
-]);
+])
