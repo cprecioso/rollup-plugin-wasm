@@ -1,21 +1,28 @@
 // @ts-check
 
 import { builtinModules } from "module"
+import { defineConfig } from "rollup"
 import ts from "rollup-plugin-ts"
+import pkg from "./package.json"
 
-const externalModules = new Set(builtinModules)
+const external = [...builtinModules, ...Object.keys(pkg.dependencies)]
 
-export default /** @type {import("rollup").RollupOptions[]} */ ([
+const makePlugins = () => [ts({ typescript: require("typescript") })]
+
+export default defineConfig([
   {
-    input: "src/index.ts",
-    output: { dir: "dist", format: "cjs", exports: "named" },
-    plugins: [ts({ typescript: require("typescript") })],
-    external: (id) => externalModules.has(id),
+    input: "src/helpers/index.ts",
+    output: { dir: "dist", format: "esm", entryFileNames: "helpers.mjs" },
+    plugins: makePlugins(),
+    external,
   },
   {
-    input: "src/utils.ts",
-    output: { dir: "dist", format: "esm", entryFileNames: "[name].mjs" },
-    plugins: [ts({ typescript: require("typescript") })],
-    external: (id) => externalModules.has(id),
+    input: "src/plugin/index.ts",
+    output: [
+      { dir: "dist", format: "esm", entryFileNames: "[name].mjs" },
+      { dir: "dist", format: "cjs", exports: "named" },
+    ],
+    plugins: makePlugins(),
+    external,
   },
 ])

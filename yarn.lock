@@ -5,10 +5,37 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@babel/helper-validator-identifier@npm:^7.16.7":
+  version: 7.16.7
+  resolution: "@babel/helper-validator-identifier@npm:7.16.7"
+  checksum: dbb3db9d184343152520a209b5684f5e0ed416109cde82b428ca9c759c29b10c7450657785a8b5c5256aa74acc6da491c1f0cf6b784939f7931ef82982051b69
+  languageName: node
+  linkType: hard
+
+"@babel/types@npm:^7.17.0":
+  version: 7.17.0
+  resolution: "@babel/types@npm:7.17.0"
+  dependencies:
+    "@babel/helper-validator-identifier": ^7.16.7
+    to-fast-properties: ^2.0.0
+  checksum: 12e5a287986fe557188e87b2c5202223f1dc83d9239a196ab936fdb9f8c1eb0be717ff19f934b5fad4e29a75586d5798f74bed209bccea1c20376b9952056f0e
+  languageName: node
+  linkType: hard
+
+"@cprecioso/identifier-registry@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@cprecioso/identifier-registry@npm:1.0.2"
+  dependencies:
+    "@babel/types": ^7.17.0
+  checksum: e65dd234fe68eb325dd62cc49cea65e2d7273b5c4acf428cc74ee09abc4f06eef796f5edf833bd219f817f98f0662f55ce3d334201475f8c994a988085e2ee40
+  languageName: node
+  linkType: hard
+
 "@cprecioso/rollup-plugin-wasm@workspace:.":
   version: 0.0.0-use.local
   resolution: "@cprecioso/rollup-plugin-wasm@workspace:."
   dependencies:
+    "@cprecioso/identifier-registry": ^1.0.2
     "@types/node": ^14
     husky: ^7.0.4
     lint-staged: ^12.3.4
@@ -1822,6 +1849,13 @@ __metadata:
   version: 2.3.8
   resolution: "through@npm:2.3.8"
   checksum: a38c3e059853c494af95d50c072b83f8b676a9ba2818dcc5b108ef252230735c54e0185437618596c790bbba8fcdaef5b290405981ffa09dce67b1f1bf190cbd
+  languageName: node
+  linkType: hard
+
+"to-fast-properties@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "to-fast-properties@npm:2.0.0"
+  checksum: be2de62fe58ead94e3e592680052683b1ec986c72d589e7b21e5697f8744cdbf48c266fa72f6c15932894c10187b5f54573a3bcf7da0bfd964d5caf23d436168
   languageName: node
   linkType: hard
 
