@@ -16,9 +16,15 @@
   "engines": {
     "node": ">=14"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
   "files": [
     "dist/*"
   ],
@@ -35,7 +41,7 @@
     "prepack": "$npm_execpath run build && pinst --disable"
   },
   "dependencies": {
-    "@cprecioso/identifier-registry": "^1.0.2"
+    "@cprecioso/identifier-registry": "^1.0.3"
   },
   "devDependencies": {
     "@types/node": "^14",

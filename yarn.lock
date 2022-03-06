@@ -22,12 +22,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cprecioso/identifier-registry@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@cprecioso/identifier-registry@npm:1.0.2"
+"@cprecioso/identifier-registry@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@cprecioso/identifier-registry@npm:1.0.3"
   dependencies:
     "@babel/types": ^7.17.0
-  checksum: e65dd234fe68eb325dd62cc49cea65e2d7273b5c4acf428cc74ee09abc4f06eef796f5edf833bd219f817f98f0662f55ce3d334201475f8c994a988085e2ee40
+  checksum: af9947d5e4932d5e41e87193a89dea43523b38055056003e510f7858dd4f01067718c824d841c912351831f60b8b2ac8587ef71b5ae9589eb6db7690db9093f8
   languageName: node
   linkType: hard
 
@@ -35,7 +35,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cprecioso/rollup-plugin-wasm@workspace:."
   dependencies:
-    "@cprecioso/identifier-registry": ^1.0.2
+    "@cprecioso/identifier-registry": ^1.0.3
     "@types/node": ^14
     husky: ^7.0.4
     lint-staged: ^12.3.4
