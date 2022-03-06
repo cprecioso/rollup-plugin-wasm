@@ -3,6 +3,7 @@
 Loose polyfill for the [WASM ESM proposal](https://github.com/WebAssembly/esm-integration), as a [Rollup](https://rollupjs.org/) plugin.
 
 - Compatible with Node.js and the browser.
+- Links WASM imports
 - Bundles `wasm-pack` output seamlessly!
 
 ## Usage
@@ -44,4 +45,3 @@ greet()
 ## Limitations
 
 - The target environment or final bundler must allow top-level await in ES modules. ([Chrome 89+, Firefox 89+, Safari 15+](https://caniuse.com/mdn-javascript_operators_await_top_level), [Node.js 14.8+ (but needs the .mjs extension)](https://nodejs.org/api/esm.html#top-level-await))
-- Instantiating modules with an import object is not (yet) supported.
