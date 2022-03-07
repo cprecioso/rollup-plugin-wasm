@@ -12,6 +12,7 @@ Turn this:
 
 ```js
 const req = fetch("./greet.wasm")
+const importObject = { /* ... */ }
 const mod = await WebAssembly.instantiateStreaming(req)
 mod.instance.greet()
 ```
@@ -22,6 +23,8 @@ into this:
 import { greet } from "./greet.wasm"
 greet()
 ```
+
+both for Node.js and browsers!
 
 ## Installation
 
