@@ -4,7 +4,7 @@ Loose polyfill for the [WASM ESM proposal](https://github.com/WebAssembly/esm-in
 
 - Compatible with Node.js and the browser.
 - Links WASM imports
-- Bundles `wasm-pack` output seamlessly!
+- Bundles [wasm-pack](https://github.com/rustwasm/wasm-pack) output seamlessly!
 
 ## Usage
 
