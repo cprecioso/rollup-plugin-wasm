@@ -14,7 +14,7 @@ Turn this:
 const req = fetch("./greet.wasm")
 const importObject = { /* ... */ }
 const mod = await WebAssembly.instantiateStreaming(req, importObject)
-mod.instance.greet()
+mod.instance.exports.greet()
 ```
 
 into this:
