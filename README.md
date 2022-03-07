@@ -13,7 +13,7 @@ Turn this:
 ```js
 const req = fetch("./greet.wasm")
 const importObject = { /* ... */ }
-const mod = await WebAssembly.instantiateStreaming(req)
+const mod = await WebAssembly.instantiateStreaming(req, importObject)
 mod.instance.greet()
 ```
 
